@@ -1,9 +1,3 @@
-# License: MIT
-
-# Colemak https://colemak.com
-
-type OVERLAY
-
 map key 2 1
 map key 3 2
 map key 4 3
@@ -56,99 +50,13 @@ map key 58 DEL
 map key 86 BACKSLASH
 map key 95 NUMPAD_COMMA
 
-# *B*reve
-key B {
-  base: 'b'
-  capslock, shift: 'B'  
-  capslock+shift: 'b'
-  ralt, shift+ralt: '\u0306'
-}
-
-# cedilla
-key COMMA {
-  base: ','
-  shift: '<'
-  ralt, shift+ralt: '\u0327'
-}
-
-# *D*iaeresis
-key D {
-  base: 'd'
-  capslock, shift: 'D'
-  capslock+shift: 'd'
-  ralt, shift+ralt: '\u0308'
-}
-
-# acu*T*e and double acute
-key T {
-  base: 't'
-  capslock, shift: 'T'
-  capslock+shift: 't'
-  ralt: '\u0301'
-  ralt+shift: '\u030B'
-}
-
-# g*R*ave
-key R {
-  base: 'r'
-  capslock, shift: 'R'
-  capslock+shift: 'r'
-  ralt, ralt+shift: '\u0300'
-}
-
-# *H*áček (caron)
-key H {
-  base: 'h'
-  capslock, shift: 'H'
-  capslock+shift: 'h'
-  ralt, ralt+shift: '\u030C'
-}
-
-# o*G*onek
-key G {
-  base: 'g'
-  capslock, shift: 'G'
-  capslock+shift    : 'g'
-  ralt, ralt+shift: '\u0328'
-}
-
-# *M*acron
-key M {
-  base: 'm'
-  capslock, shift: 'M'
-  capslock+shift: 'm'
-  ralt, ralt+shift: '\u0304'
-}
-
-# tilde
 key GRAVE {
   base: '`'
   shift: '~'
   ralt, ralt+shift: '\u0303'
 }
 
-# ring
-key K {
-  base: 'k'
-  capslock, shift: 'K'
-  capslock+shift: 'k'
-  ralt, ralt+shift: '\u030A'
-}
-
-# dot
-key PERIOD {
-  base: '.'
-  shift: '>'
-  ralt, ralt+shift: '\u0307'
-}
-
-# circumfle*X*
-key X {
-  base: 'x'
-  capslock, shift: 'X'
-  ralt, ralt+shift: '\u0302'
-  capslock+shift: 'x'
-}
+# row 1
 
 key Q {
   base: 'q'
@@ -172,6 +80,13 @@ key P {
   base: 'p'
   capslock, shift: 'P'
   capslock+shift: 'p'
+}
+
+key G {
+  base: 'g'
+  capslock, shift: 'G'
+  capslock+shift    : 'g'
+  ralt, ralt+shift: '\u0328'
 }
 
 key J {
@@ -198,16 +113,47 @@ key Y {
   capslock+shift: 'y'
 }
 
+# row 2
+
 key A {
   base: 'a'
   capslock, shift: 'A'
   capslock+shift: 'a'
 }
 
+key R {
+  base: 'r'
+  capslock, shift: 'R'
+  capslock+shift: 'r'
+  ralt, ralt+shift: '\u0300'
+}
+
 key S {
   base: 's'
   capslock, shift: 'S'
   capslock+shift: 's'
+}
+
+key T {
+  base: 't'
+  capslock, shift: 'T'
+  capslock+shift: 't'
+  ralt: '\u0301'
+  ralt+shift: '\u030B'
+}
+
+key D {
+  base: 'd'
+  capslock, shift: 'D'
+  capslock+shift: 'd'
+  ralt, shift+ralt: '\u0308'
+}
+
+key H {
+  base: 'h'
+  capslock, shift: 'H'
+  capslock+shift: 'h'
+  ralt, ralt+shift: '\u030C'
 }
 
 key N {
@@ -234,10 +180,19 @@ key O {
   capslock+shift: 'o'
 }
 
+# row 3
+
 key Z {
   base: 'z'
   capslock, shift: 'Z'
   capslock+shift: 'z'
+}
+
+key X {
+  base: 'x'
+  capslock, shift: 'X'
+  ralt, ralt+shift: '\u0302'
+  capslock+shift: 'x'
 }
 
 key C {
@@ -250,4 +205,37 @@ key V {
   base: 'v'
   capslock, shift: 'V'
   capslock+shift: 'v'
+}
+
+key B {
+  base: 'b'
+  capslock, shift: 'B'  
+  capslock+shift: 'b'
+  ralt, shift+ralt: '\u0306'
+}
+
+key K {
+  base: 'k'
+  capslock, shift: 'K'
+  capslock+shift: 'k'
+  ralt, ralt+shift: '\u030A'
+}
+
+key M {
+  base: 'm'
+  capslock, shift: 'M'
+  capslock+shift: 'm'
+  ralt, ralt+shift: '\u0304'
+}
+
+key COMMA {
+  base: ','
+  shift: '<'
+  ralt, shift+ralt: '\u0327'
+}
+
+key PERIOD {
+  base: '.'
+  shift: '>'
+  ralt, ralt+shift: '\u0307'
 }
