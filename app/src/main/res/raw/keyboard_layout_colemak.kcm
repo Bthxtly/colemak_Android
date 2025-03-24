@@ -35,7 +35,7 @@ map key 37 E
 map key 38 I
 map key 39 O
 map key 40 APOSTROPHE
-map key 41 GRAVE
+# map key 41 GRAVE
 map key 43 BACKSLASH
 map key 44 Z
 map key 45 X
@@ -60,14 +60,19 @@ map key 125 ALT_LEFT
 map key 58 CTRL_LEFT
 
 # change grave to escape
-key GRAVE {
-  base: fallback ESCAPE
-  shift: '~'
-}
+map key 41 ESCAPE
 
 # change left and right bracket to backspace and escape respectively
 map key 26 DEL
 map key 27 ESCAPE
+
+# change ralt to fn
+map key 100 FUNCTION
+
+key SPACE {
+  base, capslock, shift, capslock+shift: ' '
+  fn: fallback SHIFT_LEFT
+}
 
 # row 1
 
@@ -75,79 +80,79 @@ key Q {
   base: 'q'
   capslock, shift: 'Q'
   capslock+shift: 'q'
-  ralt: '@'
-  ralt+shift: fallback F1
+  fn: '@'
+  fn+shift: fallback F1
 }
 
 key W {
   base: 'w'
   capslock, shift: 'W'
   capslock+shift: 'w'
-  ralt: '#'
-  ralt+shift: fallback F2
+  fn: '#'
+  fn+shift: fallback F2
 }
 
 key F {
   base: 'f'
   capslock, shift: 'F'
   capslock+shift: 'f'
-  ralt: '%'
-  ralt+shift: fallback F3
+  fn: '%'
+  fn+shift: fallback F3
 }
 
 key P {
   base: 'p'
   capslock, shift: 'P'
   capslock+shift: 'p'
-  ralt: '&'
-  ralt+shift: fallback F4
+  fn: '&'
+  fn+shift: fallback F4
 }
 
 key G {
   base: 'g'
   capslock, shift: 'G'
   capslock+shift    : 'g'
-  ralt: '*'
-  ralt+shift: fallback F5
+  fn: '*'
+  fn+shift: fallback F5
 }
 
 key J {
   base: 'j'
   capslock, shift: 'J'
   capslock+shift: 'j'
-  ralt: '^'
-  ralt+shift: fallback F6
+  fn: '^'
+  fn+shift: fallback F6
 }
 
 key L {
   base: 'l'
   capslock, shift: 'L'
   capslock+shift: 'l'
-  ralt: '^'
-  ralt+shift: fallback F7
+  fn: '^'
+  fn+shift: fallback F7
 }
 
 key U {
   base: 'u'
   capslock, shift: 'U'
   capslock+shift: 'u'
-  ralt: fallback FORWARD_DEL
-  ralt+shift: fallback F8
+  fn: fallback FORWARD_DEL
+  fn+shift: fallback F8
 }
 
 key Y {
   base: 'y'
   capslock, shift: 'Y'
   capslock+shift: 'y'
-  ralt: '$'
-  ralt+shift: fallback F9
+  fn: '$'
+  fn+shift: fallback F9
 }
 
 key SEMICOLON {
   base: ';'
   capslock, shift: ':'
-  ralt: ' '
-  ralt+shift: fallback F10
+  fn: ' '
+  fn+shift: fallback F10
 }
 
 # row 2
@@ -156,80 +161,80 @@ key A {
   base: 'a'
   capslock, shift: 'A'
   capslock+shift: 'a'
-  ralt: '`'
-  ralt+shift: '1'
+  fn: '`'
+  fn+shift: '1'
 }
 
 key R {
   base: 'r'
   capslock, shift: 'R'
   capslock+shift: 'r'
-  ralt: '~'
-  ralt+shift: '2'
+  fn: '~'
+  fn+shift: '2'
 }
 
 key S {
   base: 's'
   capslock, shift: 'S'
   capslock+shift: 's'
-  ralt: '{'
-  ralt+shift: '3'
+  fn: '{'
+  fn+shift: '3'
 }
 
 key T {
   base: 't'
   capslock, shift: 'T'
   capslock+shift: 't'
-  ralt: '['
-  ralt+shift: '4'
+  fn: '['
+  fn+shift: '4'
 }
 
 key D {
   base: 'd'
   capslock, shift: 'D'
   capslock+shift: 'd'
-  ralt: '('
-  ralt+shift: '5'
+  fn: '('
+  fn+shift: '5'
 }
 
 key H {
   base: 'h'
   capslock, shift: 'H'
   capslock+shift: 'h'
-  ralt: fallback DPAD_LEFT
-  ralt+shift: '6'
+  fn: fallback DPAD_LEFT
+  fn+shift: '6'
 }
 
 key N {
   base: 'n'
   capslock, shift: 'N'
   capslock+shift: 'n'
-  ralt: fallback DPAD_DOWN
-  ralt+shift: '7'
+  fn: fallback DPAD_DOWN
+  fn+shift: '7'
 }
 
 key E {
   base: 'e'
   capslock, shift: 'E'
   capslock+shift: 'e'
-  ralt: fallback DPAD_UP
-  ralt+shift: '8'
+  fn: fallback DPAD_UP
+  fn+shift: '8'
 }
 
 key I {
   base: 'i'
   capslock, shift: 'I'
   capslock+shift: 'i'
-  ralt: fallback DPAD_RIGHT
-  ralt+shift: '9'
+  fn: fallback DPAD_RIGHT
+  fn+shift: '9'
 }
 
 key O {
   base: 'o'
   capslock, shift: 'O'
   capslock+shift: 'o'
-  ralt: fallback ENTER
-  ralt+shift: '0'
+  fn: fallback ENTER
+  fn+shift: '0'
 }
 
 # row 3
@@ -238,65 +243,67 @@ key Z {
   base: 'z'
   capslock, shift: 'Z'
   capslock+shift: 'z'
-  ralt: '!'
-  ralt+shift: fallback F11
+  fn: '!'
+  fn+shift: fallback F11
 }
 
 key X {
   base: 'x'
   capslock, shift: 'X'
   capslock+shift: 'x'
-  ralt: '_'
-  ralt+shift: fallback F12
+  fn: '_'
+  fn+shift: fallback F12
 }
 
 key C {
   base: 'c'
   capslock, shift: 'C'
   capslock+shift: 'c'
-  ralt: '}'
+  fn: '}'
 }
 
 key V {
   base: 'v'
   capslock, shift: 'V'
   capslock+shift: 'v'
-  ralt: ']'
+  fn: ']'
 }
 
 key B {
   base: 'b'
   capslock, shift: 'B'
   capslock+shift: 'b'
-  ralt: ')'
+  fn: ')'
 }
 
 key K {
   base: 'k'
   capslock, shift: 'K'
   capslock+shift: 'k'
-  ralt: '+'
+  fn: '+'
 }
 
 key M {
   base: 'm'
   capslock, shift: 'M'
   capslock+shift: 'm'
-  ralt: '-'
+  fn: '-'
 }
 
 key COMMA {
   base: ','
   shift: '<'
-  ralt: '='
+  fn: '='
 }
 
 key PERIOD {
   base: '.'
   shift: '>'
-  ralt: '\\'
+  fn: '\\'
 }
 
 key SLASH {
-  ralt: '|'
+  base: '/'
+  shift: '?'
+  fn: '|'
 }
