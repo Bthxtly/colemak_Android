@@ -1,3 +1,5 @@
+type OVERLAY
+
 map key 2 1
 map key 3 2
 map key 4 3
