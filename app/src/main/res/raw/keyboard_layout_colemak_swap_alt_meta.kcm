@@ -52,6 +52,10 @@ map key 57 SPACE
 map key 86 BACKSLASH
 map key 95 NUMPAD_COMMA
 
+# swap lmeta and lalt
+map key 56 META_LEFT
+map key 125 ALT_LEFT
+
 # change capslock to lctrl
 map key 58 CTRL_LEFT
 
@@ -62,11 +66,8 @@ map key 41 ESCAPE
 map key 26 DEL
 map key 27 ESCAPE
 
-# change rmeta to fn
-map key 126 FUNCTION
-
-# change ralt to ctrl
-map key 100 CTRL_RIGHT
+# change ralt to fn
+map key 100 FUNCTION
 
 key SPACE {
   base, capslock, shift, capslock+shift: ' '

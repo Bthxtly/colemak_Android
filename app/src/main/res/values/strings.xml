@@ -1,5 +1,6 @@
 <resources>
-	<string name="keyboard_layout_colemak">Colemak_customized</string>
+	<string name="keyboard_layout_colemak">Colemak_updated</string>
+	<string name="keyboard_layout_colemak_swap_alt_meta">Colemak_customized</string>
   <string name="app_name">Extra Keyboard Layouts</string>
   <string name="keyboard_layouts_label">Extra keyboard layouts</string>
 </resources>
